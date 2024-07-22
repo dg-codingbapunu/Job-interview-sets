@@ -7,13 +7,17 @@
   </head>
   <body>
     <script>
-      // null and undefined
-      let x = 10;
-      let y;
-      console.log(x + y);
-      let p = 12;
-      let q = null;
-      console.log(p * q);
+      // clousers
+      const parent = (y) => {
+        let x = 10;
+
+        const child = () => {
+          console.log(x - y);
+        };
+        return child;
+      };
+      let parentResult = parent(3);
+      parentResult();
     </script>
   </body>
 </html>
