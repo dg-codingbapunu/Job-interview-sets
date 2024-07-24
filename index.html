@@ -4,42 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 500px;
-      }
-
-      #parentClick {
-        background-color: aqua;
-        height: 190px;
-        width: 190px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
   </head>
-  <div id="parentClick">
-    <button id="childClick">Click</button>
-  </div>
+
   <body>
     <script>
-      const childId = document.getElementById("parentClick");
-      const parentId = document.getElementById("childClick");
       //  Event capturing
-      const parentClick = () => {
-        alert("parent clicked");
+      const firstFun = (callback) => {
+        setTimeout(() => {
+          console.log("my name is ");
+          callback();
+        }, 20000);
       };
-      const childClick = () => {
-        alert("child clicked");
-        // stop event bubling
-        // event.stopPropagation();
+      const secondFun = () => {
+        console.log("bapunu");
       };
-      parentId.addEventListener("click", parentClick, true);
-      childId.addEventListener("click", childClick, true);
+      firstFun(secondFun);
     </script>
   </body>
 </html>
