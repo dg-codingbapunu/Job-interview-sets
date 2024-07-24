@@ -7,17 +7,12 @@
   </head>
   <body>
     <script>
-      // clousers
-      const parent = (y) => {
-        let x = 10;
+      //  Hoisting
+      sum(7, 9);
 
-        const child = () => {
-          console.log(x - y);
-        };
-        return child;
+      const sum = (a, b) => {
+        console.log(a + b);
       };
-      let parentResult = parent(3);
-      parentResult();
     </script>
   </body>
 </html>
