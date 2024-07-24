@@ -22,20 +22,24 @@
       }
     </style>
   </head>
-  <div id="parentClick" onclick="parentClick()">
-    <button id="childClick" onclick="childClick()">Click</button>
+  <div id="parentClick">
+    <button id="childClick">Click</button>
   </div>
   <body>
     <script>
-      //  Event bubling
+      const childId = document.getElementById("parentClick");
+      const parentId = document.getElementById("childClick");
+      //  Event capturing
       const parentClick = () => {
         alert("parent clicked");
       };
       const childClick = () => {
         alert("child clicked");
         // stop event bubling
-        event.stopPropagation();
+        // event.stopPropagation();
       };
+      parentId.addEventListener("click", parentClick, true);
+      childId.addEventListener("click", childClick, true);
     </script>
   </body>
 </html>
