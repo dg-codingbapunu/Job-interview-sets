@@ -8,17 +8,17 @@
 
   <body>
     <script>
-      //  Event capturing
-      const firstFun = (callback) => {
-        setTimeout(() => {
-          console.log("my name is ");
-          callback();
-        }, 20000);
-      };
-      const secondFun = () => {
-        console.log("bapunu");
-      };
-      firstFun(secondFun);
+      // set Timeout and setInterval
+      const id1 = setTimeout(() => {
+        console.log("set timeouyt");
+      }, 2000);
+      clearTimeout(id1);
+      console.log(id1);
+      const id2 = setInterval(() => {
+        console.log("setinterava");
+      }, 3000);
+      console.log(id2);
+      clearInterval(id2);
     </script>
   </body>
 </html>
