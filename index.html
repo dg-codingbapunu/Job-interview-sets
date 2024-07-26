@@ -8,19 +8,14 @@
 
   <body>
     <script>
-      // asynchronous  and sychronous
-      function one() {
-        console.log("ist ");
+      // async await
+      async function myFunction() {
+        let apiCall = fetch("https://fakestoreapi.com/products/1");
+        apiCall = await apiCall;
+        apiCall = await apiCall.json();
+        console.log(apiCall);
       }
-      function two() {
-        console.log("2nd ");
-      }
-
-      two(one);
-
-      setTimeout(() => {
-        one();
-      }, 2000);
+      myFunction();
     </script>
   </body>
 </html>
