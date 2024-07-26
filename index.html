@@ -8,18 +8,19 @@
 
   <body>
     <script>
-      // Promises
-      let promise = new Promise(function (resolve, reject) {
-        var condition = true;
-        if (condition == true) {
-          resolve("this is resolve");
-        } else {
-          reject("This is rejected");
-        }
-      });
-      promise.then((res) => {
-        console.log(res);
-      });
+      // asynchronous  and sychronous
+      function one() {
+        console.log("ist ");
+      }
+      function two() {
+        console.log("2nd ");
+      }
+
+      two(one);
+
+      setTimeout(() => {
+        one();
+      }, 2000);
     </script>
   </body>
 </html>
