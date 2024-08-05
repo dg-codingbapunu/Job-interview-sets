@@ -21,15 +21,31 @@
       // student.info();
 
       // function declaration
-      greet();
-      function greet() {
-        console.log("good morning");
+      // greet();
+      // function greet() {
+      //   console.log("good morning");
+      // }
+      // // function expression
+      // const greets = () => {
+      //   console.log("good evening");
+      // };
+      // greets();
+
+      // pure function
+      function add(a, b) {
+        return a + b;
       }
-      // function expression
-      const greets = () => {
-        console.log("good evening");
-      };
-      greets();
+      console.log(add(2, 89));
+      console.log(add(2, 89));
+      // impure fuction
+      let total = 0;
+      function addtotal(value) {
+        return (total += value);
+      }
+      console.log(addtotal(8));
+      // output 8
+      console.log(addtotal(8));
+      // output 16
     </script>
   </body>
 </html>
