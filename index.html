@@ -32,20 +32,50 @@
       // greets();
 
       // pure function
-      function add(a, b) {
-        return a + b;
-      }
-      console.log(add(2, 89));
-      console.log(add(2, 89));
+      // function add(a, b) {
+      //   return a + b;
+      // }
+      // console.log(add(2, 89));
+      // console.log(add(2, 89));
       // impure fuction
-      let total = 0;
-      function addtotal(value) {
-        return (total += value);
-      }
-      console.log(addtotal(8));
+      // let total = 0;
+      // function addtotal(value) {
+      //   return (total += value);
+      // }
+      // console.log(addtotal(8));
       // output 8
-      console.log(addtotal(8));
+      // console.log(addtotal(8));
       // output 16
+
+      // bind call apply
+
+      // function sayHello(message) {
+      //   console.log(`${message},${this.name}`);
+      // }
+      // const person = { name: "bapun" };
+      // sayHello.call(person, "hello");
+      // sayHello.apply(person, ["hyy"]);
+      // const greetMessage = sayHello.bind(person);
+      // greetMessage("how");
+
+      const person = {
+        name: "bapunu",
+        rollno: 23,
+        address: {
+          city: "odisha",
+          country: "India",
+        },
+      };
+      const shallowCopy = Object.assign({}, person);
+      shallowCopy.address.city = "mumbai";
+      console.log(person.address.city);
+      console.log(shallowCopy.address.city);
+
+      // deep copy
+      const deepCopy = JSON.parse(JSON.stringify(person));
+      deepCopy.address.city = "delhi";
+      console.log(deepCopy.address.city);
+      console.log(person.address.city);
     </script>
   </body>
 </html>
