@@ -9,16 +9,27 @@
   <body>
     <script>
       // "This" key word  in javascript
-      let student = {
-        name: "bapunu",
-        rollNo: "34",
-        section: "A",
+      // let student = {
+      //   name: "bapunu",
+      //   rollNo: "34",
+      //   section: "A",
 
-        info() {
-          console.log(this.name);
-        },
+      //   info() {
+      //     console.log(this.name);
+      //   },
+      // };
+      // student.info();
+
+      // function declaration
+      greet();
+      function greet() {
+        console.log("good morning");
+      }
+      // function expression
+      const greets = () => {
+        console.log("good evening");
       };
-      student.info();
+      greets();
     </script>
   </body>
 </html>
