@@ -8,74 +8,28 @@
 
   <body>
     <script>
-      // "This" key word  in javascript
-      // let student = {
-      //   name: "bapunu",
-      //   rollNo: "34",
-      //   section: "A",
+      // prototype
 
-      //   info() {
-      //     console.log(this.name);
-      //   },
-      // };
-      // student.info();
-
-      // function declaration
-      // greet();
-      // function greet() {
-      //   console.log("good morning");
-      // }
-      // // function expression
-      // const greets = () => {
-      //   console.log("good evening");
-      // };
-      // greets();
-
-      // pure function
-      // function add(a, b) {
-      //   return a + b;
-      // }
-      // console.log(add(2, 89));
-      // console.log(add(2, 89));
-      // impure fuction
-      // let total = 0;
-      // function addtotal(value) {
-      //   return (total += value);
-      // }
-      // console.log(addtotal(8));
-      // output 8
-      // console.log(addtotal(8));
-      // output 16
-
-      // bind call apply
-
-      // function sayHello(message) {
-      //   console.log(`${message},${this.name}`);
-      // }
-      // const person = { name: "bapun" };
-      // sayHello.call(person, "hello");
-      // sayHello.apply(person, ["hyy"]);
-      // const greetMessage = sayHello.bind(person);
-      // greetMessage("how");
-
-      const person = {
-        name: "bapunu",
-        rollno: 23,
-        address: {
-          city: "odisha",
-          country: "India",
-        },
+      const obj2 = {
+        city: "Balasore",
+        age: 22,
       };
-      const shallowCopy = Object.assign({}, person);
-      shallowCopy.address.city = "mumbai";
-      console.log(person.address.city);
-      console.log(shallowCopy.address.city);
 
-      // deep copy
-      const deepCopy = JSON.parse(JSON.stringify(person));
-      deepCopy.address.city = "delhi";
-      console.log(deepCopy.address.city);
-      console.log(person.address.city);
+      const obj = {
+        name: "Bapunu",
+        roll: 143,
+        findName: function () {
+          return this.name;
+        },
+        _proto_: obj2,
+      };
+      console.log(obj);
+
+      const obj3 = {
+        name: "Bapun",
+        _proto_: obj2,
+      };
+      console.log(obj3);
     </script>
   </body>
 </html>
