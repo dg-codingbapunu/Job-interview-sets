@@ -8,28 +8,20 @@
 
   <body>
     <script>
-      // prototype
+      2;
 
-      const obj2 = {
-        city: "Balasore",
+      // object destructuring in js
+      const person = {
+        name: "bapunu",
         age: 22,
+        city: "balasore",
       };
-
-      const obj = {
-        name: "Bapunu",
-        roll: 143,
-        findName: function () {
-          return this.name;
-        },
-        _proto_: obj2,
-      };
-      console.log(obj);
-
-      const obj3 = {
-        name: "Bapun",
-        _proto_: obj2,
-      };
-      console.log(obj3);
+      // if variable name is same as object
+      let { name, age, city } = person;
+      console.log(age);
+      // store in variable
+      let { name: myName, age: myAge, city: myCity } = person;
+      console.log(myCity);
     </script>
   </body>
 </html>
